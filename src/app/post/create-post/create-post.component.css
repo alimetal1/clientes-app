@@ -1,0 +1,132 @@
+*{
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: none;
+}
+
+.main_container{
+
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/*-------------------------------C A R D S - SECTION STARTS--------------------*/
+.card_section{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card{
+
+  background-color: #f6f9ff;
+  margin: 10px;
+  width: 350px;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 3px 2px 14px rgba(44, 67,109,0.4);
+  transition: all 0.3s ease;
+}
+
+
+
+
+.card_image img{
+
+  object-fit: cover;
+  width: 100%;
+  height: 170px;
+}
+
+
+
+.card_panel{
+
+  padding: 1.6rem 1rem 1rem 1rem;
+}
+
+.card_main_title h2{
+
+  font-size: 1.4rem;
+  color: black;
+  font-weight: lighter;
+}
+
+.card_para{
+
+  padding-top: 1rem;
+}
+
+.card_para p {
+
+  font-weight: lighter;
+  text-transform: capitalize;
+  color: #39414a;
+  margin-bottom: 2%;
+}
+
+.card_readmore{
+
+  margin-top: 1rem;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 100;
+  font-family: sans-serif;
+  background-color: #175aa7;
+  width: fit-content;
+}
+
+
+.card:hover{
+
+  transform: scale(1.03);
+  background: rgb(255,255,255);
+  
+  background: linear-gradient(150deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 82%, rgba(186,244,255,1) 100%, rgba(0,211,255,1) 100% );
+}
+
+
+/*-------------------------------C A R D S - SECTION ENDS--------------------*/
+
+/*------------------------------------- HASTAGS SECTION -------------------*/
+
+
+.tags_section ul{
+  list-style: none;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tags_section ul li{
+
+  margin: 1%;
+  padding: 5px;
+  border-radius: 5px;
+  color: black;
+  font-weight: 100;
+  font-family: sans-serif;
+  background-color: #d0e6ff;
+  letter-spacing: 1px;
+  width: fit-content;
+}
+
+/*------------------------------------- HASTAGS SECTION -------------------*/
+
+/* =================== Media - Queries =========================*/
+
+@media only screen and (max-width: 1200px) {
+
+  .card_section{
+
+      justify-content: space-evenly;
+  }
+  
+}
