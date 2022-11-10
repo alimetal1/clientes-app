@@ -36,4 +36,24 @@
     padding: 3px 16px;
     opacity: 1;
   }
-  
+.card{
+  background-color: #232323 !important;
+  max-width: 800px;
+  margin: 0 auto;
+
+}
+.card-header{
+  color: white;
+  font-size: 32px;
+  FONT-WEIGHT: 500;
+}
+.card-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+.card-body p{
+  color: white;
+}

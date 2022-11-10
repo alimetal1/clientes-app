@@ -9,7 +9,8 @@ import { AuthService } from '../usuarios/auth.service';
 
 @Component({
   selector: 'app-clientes',
-  templateUrl: './clientes.component.html'
+  templateUrl: './clientes.component.html',
+  styleUrls: ['./clientes.component.css']
 })
 export class ClientesComponent implements OnInit {
 

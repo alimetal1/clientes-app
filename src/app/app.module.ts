@@ -32,7 +32,7 @@ import { CreatePostComponent } from './post/create-post/create-post.component';
 registerLocaleData(localeES, 'es');
 
 const routes: Routes = [
-  { path: '', redirectTo: '/clientes', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'clientes', component: ClientesComponent },
   { path: 'post', component: PostComponent },
   { path: 'quienes', component: QuienesComponent },

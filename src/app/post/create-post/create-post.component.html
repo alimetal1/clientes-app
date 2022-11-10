@@ -1,76 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="">
-</head>
-
-<body>
-
-
-    <!--IF YOU WANT YOU CAN REMOVE THIS MAIN_CONTAINER JUST PASTE THE CARD SECTION AND IT WILL WORK FINE -->
-
-    <div class="main_container">
-
-        <!--IF YOU WANT YOU CAN REMOVE THIS MAIN_CONTAINER JUST PASTE THE CARD SECTION AND IT WILL WORK FINE -->
-
-        <div class="card_container">
-
-
-            <div class="card_section">
-
-
-                <div class="card">
-                    <a href="">
-                        <div class="card_image"><img src="" alt=""></div>
-                        <div class="card_panel">
-                            <div class="card_main_title">
-                                <h2></h2>
-                            </div>
-                            <div class="card_para">
-                                <p></p>
-                            </div>
-                            <div class="tags_section">
-
-                            </div>
-                            <div class="card_readmore"><span></span></div>
-                        </div>
-                    </a>
-                </div>
-
-
-                <div class="card">
-                    <a href="">
-                        <div class="card_image"><img src="" alt=""></div>
-                        <div class="card_panel">
-                            <div class="card_main_title">
-                                <h2></h2>
-                            </div>
-                            <div class="card_para">
-                                <p></p>
-                            </div>
-                            <div class="tags_section">
-
-                            </div>
-                            <div class="card_readmore"><span></span></div>
-                        </div>
-                    </a>
-                </div>
-
-
+<ul class="alert alert-danger" *ngIf="errores?.length > 0">
+    <li *ngFor="let err of errores">
+      {{ err }}
+    </li>
+  </ul>
+  
+  <div class="card bg-dark text-white">
+    <div class="card-header">Muro de post</div>
+    <div class="card-body">
+  
+      <form #clienteForm="ngForm">
+        <div class="form-group row">
+          <label for="contenido" class="col-form-label">Publica aquí</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" [(ngModel)]="contenido.nombre" name="contenido" #contenido="ngModel"> <!-- required minlength="4" -->
+            <div class="alert alert-danger" *ngIf="contenido.invalid && (contenido.dirty || contenido.touched)">
+              <div *ngIf="contenido.errors.required">
+                contenido es requerido
+              </div>
+              <div *ngIf="contenido.errors.minlength">
+                Nombre debe tener al menos 4 caracteres
+              </div>
             </div>
-
-
+          </div>
         </div>
-
-
+  
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <button class="btn btn-primary" role="button" (click)='create()' *ngIf="!contenido.id else elseBlock">Crear</button>
+          </div>
+        </div>
+      </form>
+  
     </div>
-
-
-</body>
-
-</html>
+  </div>
+  

@@ -3,14 +3,16 @@ import { Usuario } from './usuario';
 import swal from 'sweetalert2';
 import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
+import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html'
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 
-  titulo: string = 'Por favor Sign In!';
+  //titulo: string = 'Por favor Sign In!';
   usuario: Usuario;
 
   constructor(private authService: AuthService, private router: Router) {

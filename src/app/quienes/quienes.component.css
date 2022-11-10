@@ -1,0 +1,11 @@
+.quienes-somos{
+    background: url("../../assets/images/quienes-somos.png") no-repeat center ;
+    height: 100vh;
+}
+.quienes-somos p{
+    color: white;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 450;
+    text-align: center;
+}
